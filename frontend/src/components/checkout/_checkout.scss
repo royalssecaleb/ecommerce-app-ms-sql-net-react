@@ -1,0 +1,115 @@
+.checkout{
+    @include flex(center, flex-start, row);
+    margin: auto;
+    width: 100%;
+    padding: 5rem 1rem;
+    @media (max-width: 850px) {
+        display: block;
+        padding: 3rem 1rem;
+    }
+}
+
+.checkout-nav{
+    @include flex(flex-start, center, row);
+    width: 100%;
+    p.separator{
+        padding: 0 0.5rem;
+    }
+}
+
+.checkout-tab{
+    @include flex(center, center, column);
+    flex: 1;
+    p, span{
+    font-size: 0.7rem;
+    text-align: center;
+    }
+    span{
+        border: 1px solid $color-lightgrey;
+        background: $color-smoke;
+        height: 35px;
+        margin: 0 0.5rem;
+        width: 35px;
+        border-radius: 50%;
+        @include flex(center, center, column);
+        &.completed{
+            background:  $color-blue;
+            color: white;
+        }
+    }
+    &.active{
+        p, span{
+            color: $color-blue;
+        }
+        span{
+            border: 1px solid $color-blue;
+            color: $color-blue;
+        }
+    }
+}
+
+.checkout-tab-line{
+    height: 2px;
+    width: 100%;
+    background: $color-smoke;
+    transform: translateY(-10px);
+    &.completed{
+        background: $color-blue;
+    }
+}
+
+.checkout-container{
+    @include flex(flex-start, center, column);
+    width: 100%;    
+    max-width: 800px;
+    padding: 1rem;
+    min-height: 80vh;
+}
+
+.checkout-content{
+    min-height: 20vh;
+    margin-top: 2rem;
+    width: 100%;    
+    max-width: 800px;
+    button {
+        display: inline-block;
+      }
+    h1, h2{
+        font-size: 1rem;
+        margin: 0.5rem 0 0rem;
+    }
+    .line-divider{
+        margin: 1rem 0;
+    }
+}
+
+.shipping-content{
+    input{
+        width: 100%;
+    }
+}
+
+.payment-option{
+    @include flex(flex-start, center, row);
+    input{
+        width: 5%;
+        margin-bottom: 0rem;
+    }
+}
+
+.checkout-bottom{
+    width: 100%;    
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.checkout-contentbox{
+    width: 100%;
+}
+
+
+.checkout-left{
+    width: 100%;
+}
